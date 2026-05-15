@@ -1,0 +1,23 @@
+CREATE DATABASE CursosDB;
+GO
+IF OBJECT_ID('dbo.enrollments', 'U') IS NOT NULL
+    DROP TABLE dbo.enrollments;
+GO
+
+CREATE TABLE enrollments (
+    id BIGINT IDENTITY(1,1) PRIMARY KEY, -- Id autoincrementable (mapeado como Long en Java)
+    nombre VARCHAR(255) NOT NULL,        -- Nombre del estudiante
+    curso VARCHAR(255) NOT NULL,         -- Nombre del curso
+    fecha VARCHAR(50) NOT NULL           -- Fecha de registro guardada como String
+);
+GO
+
+SELECT * FROM enrollments;
+
+
+
+USE CursosDB;
+GO
+
+SELECT * FROM enrollments;
+GO
